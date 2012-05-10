@@ -200,7 +200,7 @@ VALUE bloom_load(VALUE klass, VALUE file) {
 }
 
 Init_bloom_filter() {
-    VALUE cBloom = rb_define_class("BloomFilter", rb_cObject);
+    VALUE cBloom = rb_define_class("EmberBloomFilter", rb_cObject);
 
     rb_define_method(cBloom, "initialize", RUBY_METHOD_FUNC(bloom_initialize),  -1);
     rb_define_method(cBloom, "dump",       RUBY_METHOD_FUNC(bloom_dump),         1);
